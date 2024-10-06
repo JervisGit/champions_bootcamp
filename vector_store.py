@@ -1,5 +1,4 @@
 from langchain_community.vectorstores import FAISS
-from langchain_community.vectorstores import DocArrayInMemorySearch
 from langchain_community.embeddings import OpenAIEmbeddings
 import os
 from dotenv import load_dotenv
