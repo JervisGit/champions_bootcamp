@@ -29,14 +29,9 @@ def create_vector_store(documents):
             return embeddings
     
     embedding_func = CustomEmbeddings()
-
-    vector_store = DocArrayInMemorySearch.from_documents(
-        documents=documents,
-        embedding=embedding_func
-    )
     
     # Create the vector store
-    #vector_store = FAISS.from_documents(documents, embedding_func)
+    vector_store = FAISS.from_documents(documents, embedding_func)
 
     #vector_store = FAISS.from_documents(documents, embeddings)
     return vector_store
