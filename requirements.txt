@@ -6,3 +6,5 @@ chromadb
 langchain-text-splitters
 openai
 sentence-transformers
+pypdf
+PyPDF2
