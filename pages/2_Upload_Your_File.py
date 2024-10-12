@@ -9,9 +9,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from dotenv import load_dotenv
 import os
 
-with st.sidebar:
-    "Preview Page"
-
 st.title("🤖 File Upload Q&A")
 st.caption("🚀 An AI Champions Bootcamp Project")
 
