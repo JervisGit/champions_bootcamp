@@ -56,7 +56,7 @@ if uploaded_file and question:
     vector_store = create_vector_store(documents)
     rag_chain = create_rag_pipeline(vector_store)
 
-    response = rag_chain({"question": question})
+    response = rag_chain({"question": question, "chat_history": []})
 
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
