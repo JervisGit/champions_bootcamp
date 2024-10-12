@@ -26,23 +26,22 @@ def load_documents(uploaded_files):
 
     text = []
 
-    for file in uploaded_files:
-        file_extension = os.path.splitext(file.name)[1]
-        with tempfile.NamedTemporaryFile(delete=False) as temp_file:
-            temp_file.write(file.read())
-            temp_file_path = temp_file.name
+    file_extension = os.path.splitext(uploaded_files.name)[1]
+    with tempfile.NamedTemporaryFile(delete=False) as temp_file:
+        temp_file.write(uploaded_files.read())
+        temp_file_path = temp_file.name
 
-        loader = None
-        if file_extension == ".pdf":
-            loader = PyPDFLoader(temp_file_path)
-        elif file_extension == ".docx" or file_extension == ".doc":
-            loader = Docx2txtLoader(temp_file_path)
-        elif file_extension == ".txt":
-            loader = TextLoader(temp_file_path)
+    loader = None
+    if file_extension == ".pdf":
+        loader = PyPDFLoader(temp_file_path)
+    elif file_extension == ".docx" or file_extension == ".doc":
+        loader = Docx2txtLoader(temp_file_path)
+    elif file_extension == ".txt":
+        loader = TextLoader(temp_file_path)
 
-        if loader:
-            text.extend(loader.load())
-            os.remove(temp_file_path)
+    if loader:
+        text.extend(loader.load())
+        os.remove(temp_file_path)
 
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=350, chunk_overlap=100)
     split_documents = text_splitter.split_documents(text)
