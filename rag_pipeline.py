@@ -7,13 +7,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def create_rag_pipeline(vector_store):
-    llm = ChatGroq(model_name="mixtral-8x7b-32768")
+    llm = ChatGroq(temperature=0.5, model_name="mixtral-8x7b-32768")
     retriever = vector_store.as_retriever(search_kwargs={"k": 3})
     
     rag_chain = ConversationalRetrievalChain.from_llm(
         llm=llm,
         retriever=retriever,
-        return_source_documents=True
+        #return_source_documents=True
     )
     
     return rag_chain
