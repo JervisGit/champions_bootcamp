@@ -7,7 +7,7 @@ from rag_pipeline import create_rag_pipeline
 from dotenv import load_dotenv
 import os
 
-st.title("Page One - Individual Income Tax Filing")
+st.set_page_config(page_title="Chatbot for Individual Income Tax Filing", page_icon="🤖", layout="wide")
 
 # Load environment variables from .env file
 load_dotenv()
@@ -29,3 +29,18 @@ if "messages" not in st.session_state:
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
+
+# React to user input
+if prompt := st.chat_input("What would you like to know?"):
+    # Display user message in chat message container
+    st.chat_message("user").markdown(prompt)
+    # Add user message to chat history
+    st.session_state.messages.append({"role": "user", "content": prompt})
+
+    response = rag_chain({"question": prompt, "chat_history": [(m["role"], m["content"]) for m in st.session_state.messages]})
+    
+    # Display assistant response in chat message container
+    with st.chat_message("assistant"):
+        st.markdown(response["answer"])
+    # Add assistant response to chat history
+    st.session_state.messages.append({"role": "assistant", "content": response["answer"]})
