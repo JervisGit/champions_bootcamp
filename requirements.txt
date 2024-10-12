@@ -10,3 +10,4 @@ pypdf
 PyPDF2
 tiktoken
 faiss-cpu
+langchain-openai
