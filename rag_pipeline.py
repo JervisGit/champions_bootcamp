@@ -13,7 +13,7 @@ def create_rag_pipeline(vector_store):
     rag_chain = ConversationalRetrievalChain.from_llm(
         llm=llm,
         retriever=retriever,
-        return_source_documents=True
+        #return_source_documents=True
     )
     
     return rag_chain
