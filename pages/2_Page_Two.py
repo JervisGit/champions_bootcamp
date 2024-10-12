@@ -19,3 +19,6 @@ question = st.text_input(
     placeholder="Can you give me a short summary?",
     disabled=not uploaded_file,
 )
+
+if uploaded_file and question:
+    st.chat_message("user").markdown(question)
