@@ -7,9 +7,6 @@ from rag_pipeline import create_rag_pipeline
 from dotenv import load_dotenv
 import os
 
-with st.sidebar:
-    "Preview Page"
-
 st.title("🤖 Chatbot for Individual Income Tax Filing")
 st.caption("🚀 An AI Champions Bootcamp Project")
 
