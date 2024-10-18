@@ -2,12 +2,16 @@ import streamlit as st
 from document_loader import load_documents
 from vector_store import create_vector_store
 from rag_pipeline import create_rag_pipeline
+from utility import check_password
 import tempfile
 from langchain_community.document_loaders import PyPDFLoader, TextLoader, Docx2txtLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 from dotenv import load_dotenv
 import os
+
+if not check_password():
+    st.stop()  # Do not continue if check_password is not True.
 
 st.title("🤖 File Upload Q&A")
 st.caption("🚀 An AI Champions Bootcamp Project")
