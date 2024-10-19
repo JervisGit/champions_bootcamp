@@ -26,9 +26,9 @@ and generation. Here's an overview of how it works:
 """)
 
 # Placeholder for RAG Architecture image
-rag_image_path = os.path.join('..', 'images', 'rag_architecture.png')
-rag_image = Image.open(rag_image_path)
-st.image(rag_image, caption="RAG Architecture", use_column_width=True)
+#rag_image_path = os.path.join('..', 'images', 'rag_architecture.png')
+#rag_image = Image.open(rag_image_path)
+st.image("images/rag_architecture.png", caption="RAG Architecture", use_column_width=True)
 
 st.write("""
 1. Data Ingestion: We collect data from the IRAS website and user-uploaded files.
