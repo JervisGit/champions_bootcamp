@@ -33,27 +33,31 @@ st.markdown("""
 # Our Solution Approach
 st.subheader("2. Our Solution Approach")
 st.write("Our approach to solving these problems involves:")
-solutions = [
-    "Simplifying Access to Information",
-    "Personalized Assistance",
-    "Bridging Knowledge Gaps",
-    "Empowering Self-Service",
-    "Adaptability"
-]
-for solution in solutions:
-    st.markdown(f"- {solution}")
+approaches = {
+    "Simplifying Access to Information": "Creating a user-friendly interface that allows individuals to ask questions in natural language, eliminating the need to navigate complex websites or documents.",
+    "Personalized Assistance": "Providing tailored responses based on the specific context of each user's query, whether it's about tax filing or information from their own documents.",
+    "Bridging Knowledge Gaps": "Offering explanations and clarifications on complex topics, helping users better understand the information they receive.",
+    "Empowering Self-Service": "Enabling users to find answers quickly and independently, reducing the need for direct human support in many cases.",
+    "Adaptability": "Creating a system that can handle both standardized information (like tax regulations) and variable content (like user-uploaded documents), making it versatile for different use cases."
+}
+
+for approach, description in approaches.items():
+    with st.expander(approach):
+        st.write(description)
 
 # Why Our AI-Powered Solution is Better
 st.subheader("3. Why Our AI-Powered Solution is Better")
-advantages = [
-    "Enhanced Accessibility",
-    "Consistency",
-    "Scalability",
-    "Continuous Improvement",
-    "Personalization"
-]
-for advantage in advantages:
-    st.markdown(f"- {advantage}")
+advantages = {
+    "Enhanced Accessibility": "Users can get answers 24/7 without waiting for human support or searching through lengthy documents.",
+    "Consistency": "The system provides uniform, accurate information, reducing the risk of human error or inconsistency.",
+    "Scalability": "It can handle a large number of queries simultaneously, making it efficient for wide-scale use.",
+    "Continuous Improvement": "The system can be updated with new information quickly, ensuring users always have access to the most current data.",
+    "Personalization": "By understanding context and user needs, it provides more relevant and tailored responses than static FAQs or search functions."
+}
+
+for advantage, description in advantages.items():
+    with st.expander(advantage):
+        st.write(description)
 
 # Data Sources
 st.header("Data Sources")
