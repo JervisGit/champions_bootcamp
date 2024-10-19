@@ -48,7 +48,10 @@ This flowchart illustrates how our system handles queries related to individual 
 """)
 
 # Placeholder for Use Case 1 flowchart
-st.image("images/usecase_1_flowchart.png", caption="Individual Income Tax Filing Flowchart", width=200)
+# Center the Use Case 1 flowchart
+col1, col2, col3 = st.columns([1,2,1])
+with col2:
+    st.image("images/usecase_1_flowchart.png", caption="Individual Income Tax Filing Flowchart", width=100, use_column_width=True)
 
 st.write("""
 1. User Input: The user submits a tax-related query.
