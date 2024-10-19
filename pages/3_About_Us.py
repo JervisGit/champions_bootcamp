@@ -71,7 +71,7 @@ with col2:
 
 # Features
 st.header("Features")
-tab1, tab2 = st.tabs(["Use Case 1: Individual Income Tax Filing Chatbot", "Use Case 2: Custom Document Q&A"])
+tab1, tab2 = st.tabs(["Use Case 1: Individual Income Tax Filing Chatbot", "Use Case 2: User File Upload Q&A"])
 
 with tab1:
     st.markdown("""
