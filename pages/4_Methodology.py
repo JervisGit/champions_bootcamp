@@ -48,7 +48,7 @@ This flowchart illustrates how our system handles queries related to individual 
 """)
 
 # Placeholder for Use Case 1 flowchart
-st.image("images/usecase_1_flowchart.png", caption="Individual Income Tax Filing Flowchart", width=300)
+st.image("images/usecase_1_flowchart.png", caption="Individual Income Tax Filing Flowchart", width=200)
 
 st.write("""
 1. User Input: The user submits a tax-related query.
@@ -66,7 +66,7 @@ This flowchart demonstrates how our system handles Q&A for user-uploaded documen
 """)
 
 # Placeholder for Use Case 2 flowchart
-st.image("images/usecase_2_flowchart.png", caption="File Upload Q&A Flowchart", width=300)
+st.image("images/usecase_2_flowchart.png", caption="File Upload Q&A Flowchart", width=200)
 
 st.write("""
 1. Document Upload: The user uploads their document(s).
