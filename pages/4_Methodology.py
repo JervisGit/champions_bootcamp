@@ -26,7 +26,9 @@ and generation. Here's an overview of how it works:
 """)
 
 # Placeholder for RAG Architecture image
-st.image("images/rag_architecture.png", caption="RAG Architecture", width=800)
+col1, col2, col3 = st.columns([1,2,1])
+with col2:
+    st.image("images/rag_architecture.png", caption="RAG Architecture", width=800)
 
 st.write("""
 1. Data Ingestion: We collect data from the IRAS website and user-uploaded files.
