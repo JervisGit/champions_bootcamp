@@ -26,7 +26,7 @@ and generation. Here's an overview of how it works:
 """)
 
 # Placeholder for RAG Architecture image
-st.image("images/rag_architecture.png", caption="RAG Architecture", use_column_width=True)
+st.image("images/rag_architecture.png", caption="RAG Architecture", width=500)
 
 st.write("""
 1. Data Ingestion: We collect data from the IRAS website and user-uploaded files.
@@ -48,7 +48,7 @@ This flowchart illustrates how our system handles queries related to individual 
 """)
 
 # Placeholder for Use Case 1 flowchart
-st.image("images/usecase_1_flowchart.png", caption="Individual Income Tax Filing Flowchart", use_column_width=True)
+st.image("images/usecase_1_flowchart.png", caption="Individual Income Tax Filing Flowchart", width=600)
 
 st.write("""
 1. User Input: The user submits a tax-related query.
@@ -66,7 +66,7 @@ This flowchart demonstrates how our system handles Q&A for user-uploaded documen
 """)
 
 # Placeholder for Use Case 2 flowchart
-st.image("images/usecase_2_flowchart.png", caption="File Upload Q&A Flowchart", use_column_width=True)
+st.image("images/usecase_2_flowchart.png", caption="File Upload Q&A Flowchart", width=600)
 
 st.write("""
 1. Document Upload: The user uploads their document(s).
