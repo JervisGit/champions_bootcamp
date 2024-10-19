@@ -26,8 +26,8 @@ and generation. Here's an overview of how it works:
 """)
 
 # Placeholder for RAG Architecture image
-# Replace '/path/to/rag_architecture.png' with the actual path to your image
-rag_image = Image.open('/images/rag_architecture.png')
+rag_image_path = os.path.join('..', 'images', 'rag_architecture.png')
+rag_image = Image.open(rag_image_path)
 st.image(rag_image, caption="RAG Architecture", use_column_width=True)
 
 st.write("""
@@ -50,8 +50,8 @@ This flowchart illustrates how our system handles queries related to individual 
 """)
 
 # Placeholder for Use Case 1 flowchart
-# Replace '/path/to/use_case_1_flowchart.png' with the actual path to your image
-uc1_image = Image.open('/images/usecase_1_flowchart.png')
+uc1_image_path = os.path.join('..', 'images', 'usecase_1_flowchart.png')
+uc1_image = Image.open(uc1_image_path)
 st.image(uc1_image, caption="Individual Income Tax Filing Flowchart", use_column_width=True)
 
 st.write("""
@@ -63,16 +63,16 @@ st.write("""
 6. User Response: The system provides the user with a detailed answer to their tax query.
 """)
 
-# Use Case 2: Custom Document Q&A
-st.subheader("Use Case 2: Custom Document Q&A")
+# Use Case 2: File Upload Q&A
+st.subheader("Use Case 2: File Upload Q&A")
 st.write("""
 This flowchart demonstrates how our system handles Q&A for user-uploaded documents:
 """)
 
 # Placeholder for Use Case 2 flowchart
-# Replace '/path/to/use_case_2_flowchart.png' with the actual path to your image
-uc2_image = Image.open('/images/usecase_2_flowchart.png')
-st.image(uc2_image, caption="Custom Document Q&A Flowchart", use_column_width=True)
+uc2_image_path = os.path.join('..', 'images', 'usecase_2_flowchart.png')
+uc2_image = Image.open(uc2_image_path)
+st.image(uc2_image, caption="File Upload Q&A Flowchart", use_column_width=True)
 
 st.write("""
 1. Document Upload: The user uploads their document(s).
