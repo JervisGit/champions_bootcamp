@@ -14,7 +14,7 @@ if not check_password():
 st.title("🤖 Chatbot for Individual Income Tax Filing")
 st.caption("🚀 An AI Champions Bootcamp Project")
 
-with st.expander("Disclaimer"):
+with st.expander("Disclaimer ⚠️"):
     st.write('''
         IMPORTANT NOTICE: This web application is a prototype developed for educational purposes only. The information provided here is NOT intended for real-world usage and should not be relied upon for making any decisions, especially those related to financial, legal, or healthcare matters.
 
