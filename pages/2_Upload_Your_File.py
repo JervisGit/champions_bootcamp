@@ -13,7 +13,7 @@ import os
 if not check_password():
     st.stop()  # Do not continue if check_password is not True.
 
-st.title("🤖 File Upload Q&A")
+st.title("📝📚 File Upload Q&A")
 st.caption("🚀 An AI Champions Bootcamp Project")
 
 uploaded_file = st.file_uploader("Upload a document", type=("txt", "doc", "pdf"))
