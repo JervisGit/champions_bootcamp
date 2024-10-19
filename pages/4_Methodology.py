@@ -26,7 +26,7 @@ and generation. Here's an overview of how it works:
 """)
 
 # Placeholder for RAG Architecture image
-col1, col2, col3 = st.columns([1,2,1])
+col1, col2, col3 = st.columns([0.5,2,1])
 with col2:
     st.image("images/rag_architecture.png", caption="RAG Architecture", width=800)
 
