@@ -26,13 +26,11 @@ and generation. Here's an overview of how it works:
 """)
 
 # Placeholder for RAG Architecture image
-#rag_image_path = os.path.join('..', 'images', 'rag_architecture.png')
-#rag_image = Image.open(rag_image_path)
 st.image("images/rag_architecture.png", caption="RAG Architecture", use_column_width=True)
 
 st.write("""
 1. Data Ingestion: We collect data from the IRAS website and user-uploaded files.
-2. Text Embedding: The textual data is converted into numerical vectors (embeddings) using advanced NLP techniques.
+2. Text Embedding: The textual data is converted into numerical vectors (embeddings).
 3. Vector Store: These embeddings are stored in a vector database for quick and efficient retrieval.
 4. Query Processing: When a user asks a question, it's processed and converted into a query vector.
 5. Retrieval: The system searches the vector store for relevant information based on the query.
@@ -50,9 +48,7 @@ This flowchart illustrates how our system handles queries related to individual 
 """)
 
 # Placeholder for Use Case 1 flowchart
-uc1_image_path = os.path.join('..', 'images', 'usecase_1_flowchart.png')
-uc1_image = Image.open(uc1_image_path)
-st.image(uc1_image, caption="Individual Income Tax Filing Flowchart", use_column_width=True)
+st.image("images/usecase_1_flowchart.png", caption="Individual Income Tax Filing Flowchart", use_column_width=True)
 
 st.write("""
 1. User Input: The user submits a tax-related query.
@@ -70,9 +66,7 @@ This flowchart demonstrates how our system handles Q&A for user-uploaded documen
 """)
 
 # Placeholder for Use Case 2 flowchart
-uc2_image_path = os.path.join('..', 'images', 'usecase_2_flowchart.png')
-uc2_image = Image.open(uc2_image_path)
-st.image(uc2_image, caption="File Upload Q&A Flowchart", use_column_width=True)
+st.image("images/usecase_2_flowchart.png", caption="File Upload Q&A Flowchart", use_column_width=True)
 
 st.write("""
 1. Document Upload: The user uploads their document(s).
@@ -94,6 +88,7 @@ Our project leverages several key technologies:
 - **Vector Embeddings**: To convert text into numerical representations for efficient retrieval.
 - **Vector Database**: For storing and quickly accessing embedded information.
 - **Large Language Model**: To generate human-like responses based on retrieved context.
+- **Streamlit**: To deploy the application front-end on Community Cloud
 
 This technology stack allows us to create a powerful, flexible system capable of handling 
 diverse information retrieval and generation tasks.
