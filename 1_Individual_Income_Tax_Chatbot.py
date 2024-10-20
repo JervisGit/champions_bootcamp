@@ -51,7 +51,14 @@ if prompt := st.chat_input("What would you like to know?"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
 
-    response = rag_chain({"question": prompt, "chat_history": [(m["role"], m["content"]) for m in st.session_state.messages]})
+    engineered_prompt = f"""Given the following question, provide a clear and concise answer based on the retrieved context:
+
+                            Question: {prompt}
+
+                            Use only the information from the retrieved documents to answer. If the answer isn't in the documents, say so.
+                            """
+
+    response = rag_chain({"question": engineered_prompt, "chat_history": [(m["role"], m["content"]) for m in st.session_state.messages]})
 
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
